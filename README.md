@@ -1,32 +1,32 @@
 # 🛰️ Sentinel: Enterprise RPA & Predictive Market Intelligence
 
-**Sentinel** is an end-to-end Robotic Process Automation (RPA) framework designed to bridge the gap between volatile external market data and internal corporate decision-making systems. 
+**Sentinel** is an end-to-end Robotic Process Automation (RPA) and Data Visualization framework. It is designed to solve the critical business bottleneck of manual data synchronization between fragmented external markets and internal corporate ERP systems.
 
-## 🎯 Project Aim
-The primary objective of Sentinel is to demonstrate a **High-Availability Data Pipeline**. In a global pharmaceutical environment like Orion, manual data entry is a bottleneck. This project aims to:
-1.  **Automate Extraction:** Eliminate manual monitoring of external web-based metrics.
-2.  **Ensure Data Integrity:** Implement a "Decision Gate" to validate data before it touches internal ERP systems.
-3.  **Visualize Volatility:** Transform raw, noisy data into actionable insights through advanced trend analysis.
+## 🎯 The Business Challenge: The "Manual Bottleneck"
+In modern Information Management, relying on human operators to monitor, verify, and input market data creates three primary risks:
+1.  **Latency:** Manual entry is slow, meaning decision-makers work with "stale" data.
+2.  **Scalability:** As the number of monitored metrics grows, human labor costs scale linearly. 
+3.  **Accuracy (The Fat Finger Risk):** Manual transcription leads to costly data-entry errors, especially with complex decimals and currency conversions.
+
+**Sentinel eliminates this bottleneck by acting as a "Digital Bridge"—executing extraction, validation, and entry in seconds with 100% precision.**
 
 ## 🏗️ Technical Architecture
-The system is built on a three-tier architecture:
-1.  **The Scout (Playwright):** A resilient RPA engine that navigates web DOMs, handles cookie consent, and extracts localized currency/metric data.
-2.  **The Warehouse (CSV/Pandas):** A persistent, audit-ready data store that maintains a historical record of every automation run.
-3.  **The Command Center (Streamlit/Plotly):** A high-level analytics dashboard for executive stakeholders.
+The system is built on a three-tier "Extraction-to-Insight" architecture:
+1.  **The Scout (Playwright):** A resilient RPA engine that navigates web DOMs, handles regional GDPR overlays, and extracts localized metrics.
+2.  **The Warehouse (CSV/Pandas):** An audit-ready data store that maintains a historical "Source of Truth" for every automation run.
+3.  **The Command Center (Streamlit/Plotly):** An analytics dashboard for executive stakeholders to visualize volatility and trends.
 
-
-
-## 📊 Key Results & Features
-* **Non-Linear Trend Analysis:** The system successfully visualizes complex market patterns, including **Exponential Growth** (supply shocks), **Sine Waves** (seasonal demand), and **Stochastic Spikes** (market anomalies).
-* **Automated Anomaly Detection:** Implemented "Smart Metrics" that automatically flag **⚠️ VOLATILE** data points if the percentage change exceeds a 20% threshold between runs.
-* **Cross-Application Transfer:** Demonstrated the ability to move captured web data into a secondary "Internal Portal," simulating a real-world ERP integration.
-* **Zero-Loss Logging:** Engineered a robust logging system using `fsync` to ensure a permanent audit trail even in the event of hardware or network failure.
+## 📊 Key Results & Strategic Features
+* **Automated Data Entry:** Demonstrated via a cross-application transfer where captured web metrics are automatically "typed" into a secondary internal portal, simulating a live ERP integration.
+* **Non-Linear Trend Analysis:** The system visualizes complex market patterns, including **Exponential Growth** (demand shocks), **Sine Waves** (cyclical trends), and **Stochastic Spikes** (market anomalies).
+* **Anomaly Detection:** Integrated "Smart Metrics" that flag **⚠️ VOLATILE** data points if the percentage change exceeds a 20% threshold, allowing analysts to focus only on high-risk shifts.
+* **Zero-Loss Logging:** Engineered with `fsync` persistence to ensure a permanent audit trail for compliance and regulatory standards.
 
 ## 🚦 How to Execute the Pipeline
 1.  **Environment Setup:** `source venv/bin/activate && pip install -r requirements.txt`
-2.  **Data Generation:** Run `python3 bootstrap_data.py` to populate the warehouse with 10 days of historical volatile data.
-3.  **Real-Time Scrape:** Run `python3 bot.py` to perform a live extraction and internal system update.
-4.  **Launch Analytics:** Run `streamlit run app.py` to view the Intelligence Dashboard.
+2.  **Generate History:** Run `python3 bootstrap_data.py` (Populates the warehouse with 10 days of volatile data).
+3.  **Execute RPA Loop:** Run `python3 bot.py` (Performs live extraction and automated internal system update).
+4.  **Launch Analytics:** Run `streamlit run app.py` (Launches the Intelligence Dashboard).
 
 ---
-*Developed as a Technical Portfolio for Orion Information Management.*
+*Developed as a high-performance portfolio piece for Robotic Process Automation and Information Management roles.*
